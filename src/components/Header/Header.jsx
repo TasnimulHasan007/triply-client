@@ -36,7 +36,7 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item as={NavLink} to="/join">
-                  Join Us
+                  Join
                 </NavDropdown.Item>
                 {/* <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">

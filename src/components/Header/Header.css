@@ -26,7 +26,7 @@ header .drop_down > .dropdown-menu {
 }
 
 header .drop_down > .dropdown-menu > a {
-  transform: translateX(-10%);
+  transform: translateX(-15%);
 }
 
 header .drop_down > .dropdown-menu > a:hover {

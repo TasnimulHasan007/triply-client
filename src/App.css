@@ -12,5 +12,4 @@ a,
 button,
 input[type='submit'] {
   outline: none !important;
-  box-shadow: none !important;
 }

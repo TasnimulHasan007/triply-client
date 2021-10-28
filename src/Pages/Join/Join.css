@@ -1,0 +1,48 @@
+.join {
+  padding-block: 10rem;
+  background: url(../../images/join.jpg) no-repeat center center/cover;
+}
+
+.join-container {
+  background: #fff;
+  max-width: 350px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+  padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.join .logo {
+  height: 3.5rem;
+}
+
+.join p {
+  margin-block: 1.5rem;
+}
+
+.join button {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: #4285f4;
+  color: #fff;
+  font-weight: 500;
+  padding: 0;
+  padding-right: 25px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+  transition: 0.2s ease;
+}
+
+.join button:focus {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.join button img {
+  height: 2.5rem;
+  margin-right: 25px;
+  background: #fff;
+}

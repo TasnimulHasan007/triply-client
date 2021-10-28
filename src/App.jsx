@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import NotFound from './Pages/NotFound/NotFound'
 import Footer from './components/Footer/Footer'
+import Join from './Pages/Join/Join'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/join">
+          <Join />
         </Route>
         <Route path="*">
           <NotFound />
