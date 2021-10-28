@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #dc834e;
+  --primary-color-darkened: #bb6939;
+  --secondary-color: #202f59;
+  --secondary-color-darkened: #17254d;
+  --text-color: #8990a2;
+}
+
+/* resets */
+
+a,
+button,
+input[type='submit'] {
+  outline: none !important;
+  box-shadow: none !important;
+}

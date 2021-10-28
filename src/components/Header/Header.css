@@ -1,0 +1,39 @@
+/* navbar */
+header .nav_bar a {
+  font-weight: 500;
+  color: black !important;
+  margin-left: 1.5rem;
+}
+
+header .nav_bar a:hover,
+header .nav_bar a:focus {
+  color: var(--primary-color) !important;
+}
+
+/* toggler */
+header .nav_toggler {
+  border: none;
+}
+
+/* dropdown */
+header .drop_down > a::after {
+  display: none;
+}
+
+header .drop_down > .dropdown-menu {
+  min-width: unset;
+  padding-block: 0;
+}
+
+header .drop_down > .dropdown-menu > a {
+  transform: translateX(-10%);
+}
+
+header .drop_down > .dropdown-menu > a:hover {
+  background-color: unset;
+}
+
+header .drop_down > .dropdown-menu > a.active {
+  background-color: unset;
+  color: var(--primary-color);
+}

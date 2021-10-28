@@ -1,0 +1,43 @@
+.banner {
+  background: url(../../images/banner1.jpg) no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding-block: 15rem;
+}
+.banner h2,
+.banner p {
+  text-shadow: 1px 5px rgb(0 0 0 / 20%);
+}
+
+.banner h2 {
+  padding-top: 10rem;
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* overlay */
+.banner .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 40%);
+  top: 0;
+  left: 0;
+}
+
+/* media queries */
+@media (max-width: 564px) {
+  .banner h2 {
+    font-size: 3.5rem;
+  }
+  .banner p {
+    font-size: 1.2rem;
+  }
+}
