@@ -14,7 +14,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([])
   // load data
   useEffect(() => {
-    fetch('http://localhost:5000/orders')
+    fetch('https://afternoon-sea-48900.herokuapp.com/orders')
       .then(res => res.json())
       .then(data => setOrders(data))
   }, [])
@@ -23,12 +23,14 @@ const MyOrders = () => {
   const deleteOrder = async id => {
     const result = await confirm('Your are going to delete the order')
     if (result) {
-      axios.delete(`http://localhost:5000/orders/${id}`).then(res => {
-        if (res.data.deletedCount > 0) {
-          const remainingOrders = orders.filter(order => order._id !== id)
-          setOrders(remainingOrders)
-        }
-      })
+      axios
+        .delete(`https://afternoon-sea-48900.herokuapp.com/orders/${id}`)
+        .then(res => {
+          if (res.data.deletedCount > 0) {
+            const remainingOrders = orders.filter(order => order._id !== id)
+            setOrders(remainingOrders)
+          }
+        })
     }
   }
   return (

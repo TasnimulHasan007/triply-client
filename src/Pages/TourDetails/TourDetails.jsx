@@ -15,7 +15,7 @@ const TourDetails = () => {
   const [modalShow, setModalShow] = useState(false)
   // load data
   useEffect(() => {
-    fetch(`http://localhost:5000/tours/${tourId}`)
+    fetch(`https://afternoon-sea-48900.herokuapp.com/tours/${tourId}`)
       .then(res => res.json())
       .then(data => setTour(data))
   }, [tourId])
@@ -26,12 +26,14 @@ const TourDetails = () => {
   const handleBook = data => {
     data.status = 'Pending'
     data.tour = tour
-    axios.post('http://localhost:5000/orders', data).then(res => {
-      if (res.data.insertedId) {
-        setModalShow(true)
-        reset()
-      }
-    })
+    axios
+      .post('https://afternoon-sea-48900.herokuapp.com/orders', data)
+      .then(res => {
+        if (res.data.insertedId) {
+          setModalShow(true)
+          reset()
+        }
+      })
   }
   return (
     <div className="tour">

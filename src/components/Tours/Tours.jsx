@@ -8,7 +8,7 @@ const Tours = () => {
   const [tours, setTours] = useState([])
   // loading data
   useEffect(() => {
-    fetch('http://localhost:5000/tours')
+    fetch('https://afternoon-sea-48900.herokuapp.com/tours')
       .then(res => res.json())
       .then(data => setTours(data))
   }, [])

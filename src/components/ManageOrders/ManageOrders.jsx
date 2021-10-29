@@ -11,7 +11,7 @@ const ManageOrders = () => {
 
   // load data
   useEffect(() => {
-    fetch('http://localhost:5000/orders')
+    fetch('https://afternoon-sea-48900.herokuapp.com/orders')
       .then(res => res.json())
       .then(data => setOrders(data))
   }, [])
@@ -19,12 +19,14 @@ const ManageOrders = () => {
   const deleteOrder = async id => {
     const result = await confirm('Your are going to delete the order')
     if (result) {
-      axios.delete(`http://localhost:5000/orders/${id}`).then(res => {
-        if (res.data.deletedCount > 0) {
-          const remainingOrders = orders.filter(order => order._id !== id)
-          setOrders(remainingOrders)
-        }
-      })
+      axios
+        .delete(`https://afternoon-sea-48900.herokuapp.com/orders/${id}`)
+        .then(res => {
+          if (res.data.deletedCount > 0) {
+            const remainingOrders = orders.filter(order => order._id !== id)
+            setOrders(remainingOrders)
+          }
+        })
     }
   }
   // approve order
@@ -34,7 +36,10 @@ const ManageOrders = () => {
     // update on database
     if (result) {
       axios
-        .put(`http://localhost:5000/orders/${order._id}`, order)
+        .put(
+          `https://afternoon-sea-48900.herokuapp.com/orders/${order._id}`,
+          order
+        )
         .then(res => {
           if (res.data.modifiedCount > 0) {
             setModalShow(true)

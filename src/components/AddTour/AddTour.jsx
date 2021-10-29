@@ -11,12 +11,14 @@ const AddTour = () => {
   const { register, handleSubmit, reset } = useForm()
   // form handler
   const addTour = data => {
-    axios.post('http://localhost:5000/tours', data).then(res => {
-      if (res.data.insertedId) {
-        setModalShow(true)
-        reset()
-      }
-    })
+    axios
+      .post('https://afternoon-sea-48900.herokuapp.com/tours', data)
+      .then(res => {
+        if (res.data.insertedId) {
+          setModalShow(true)
+          reset()
+        }
+      })
   }
   return (
     <div className="add_tour">
