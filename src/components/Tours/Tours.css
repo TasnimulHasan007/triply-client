@@ -1,0 +1,25 @@
+.tours h2 {
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin: 3.75rem;
+}
+
+/* grid */
+.tours .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .tours .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tours .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,6 +8,7 @@ import Join from './Pages/Join/Join'
 import AuthProvider from './contexts/AuthProvider'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
+import TourDetails from './Pages/TourDetails/TourDetails'
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/tours/:tourId">
+            <TourDetails />
           </PrivateRoute>
           <Route path="*">
             <NotFound />

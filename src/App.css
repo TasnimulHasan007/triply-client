@@ -12,6 +12,7 @@ a,
 button,
 input[type='submit'] {
   outline: none !important;
+  text-decoration: none;
 }
 
 /* utilities */
@@ -28,6 +29,7 @@ input[type='submit'] {
   text-align: center;
 }
 
-.main_btn:hover {
+.main_btn:hover,
+.main_btn:focus {
   background: var(--primary-color-darkened);
 }

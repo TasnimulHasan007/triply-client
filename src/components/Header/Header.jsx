@@ -8,7 +8,7 @@ const Header = () => {
   // user
   const { user, logOut } = useAuth()
   return (
-    <header>
+    <header className=" sticky-top">
       <Navbar bg="white" expand="lg" className="shadow-sm">
         <Container>
           <Navbar.Brand as={Link} to="/">
@@ -51,7 +51,6 @@ const Header = () => {
                 )}
                 {user.email && (
                   <>
-                    {/* <NavDropdown.Divider /> */}
                     <NavDropdown.Item onClick={logOut}>
                       <i className="fas fa-sign-out-alt"></i> Log Out
                     </NavDropdown.Item>

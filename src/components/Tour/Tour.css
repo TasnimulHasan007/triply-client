@@ -1,0 +1,72 @@
+/* tour */
+.tour {
+  border-radius: 1.25rem;
+  background-color: #fff;
+  box-shadow: 0 0 30px 0 rgb(6 30 98 / 8%);
+  transition: all ease-in-out 0.2s;
+  padding: 0;
+}
+
+.tour .thumbnail img {
+  width: 100%;
+  border-radius: 1.25rem;
+}
+
+.tour .details {
+  padding: 1.5625rem 1.875rem;
+}
+
+.tour .details h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.tour .details h5 {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+}
+
+.tour .details p {
+  color: var(--text-color);
+  text-align: justify;
+  margin-bottom: 1.25rem;
+}
+
+.tour .details hr {
+  margin: 0 0 0.9375rem 0;
+}
+
+.tour .details .price {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.tour .details .price .orange {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+
+.tour .details a {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--secondary-color);
+  transition: 0.2s ease;
+}
+
+.tour .details a:hover {
+  color: var(--primary-color);
+}
+
+.tour .details a i {
+  margin-left: 0.625rem;
+  color: var(--primary-color);
+}

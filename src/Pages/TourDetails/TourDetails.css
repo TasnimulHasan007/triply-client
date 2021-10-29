@@ -1,0 +1,161 @@
+/* header */
+.tour .header {
+  background: #f6f7fb;
+  position: relative;
+  padding: 1.875rem 0 5.3125rem 0;
+  margin-bottom: 6.25rem;
+  text-align: center;
+}
+
+.tour .header h1 {
+  font-size: 3.125rem;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+
+.tour .header h5 {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.tour .header img {
+  max-width: 100%;
+  display: block;
+  margin: 1.25rem auto;
+}
+
+/* features */
+.tour .header .features {
+  text-align: left;
+  width: 300px;
+  background: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 15px 0 rgb(6 30 98 / 15%);
+  padding-block: 1.875rem;
+  position: absolute;
+  left: 50%;
+  bottom: -54px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.tour .header .features p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.tour .header .features .price {
+  color: var(--text-color);
+  padding-right: 3.125rem;
+}
+
+.tour .header .features .orange {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-right: 5px;
+}
+
+.tour .header .features i {
+  color: var(--primary-color);
+  font-size: 1.875rem;
+  padding-right: 1.25rem;
+}
+
+/* main */
+.tour .main h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  padding-bottom: 1.875rem;
+}
+
+.tour .main p {
+  color: var(--text-color);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.tour .main hr {
+  margin-block: 1.875rem;
+}
+
+.tour .main ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 1.875rem;
+}
+
+.tour .main ul li {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.tour .main .includes i {
+  color: #2fa453;
+}
+
+.tour .main .excludes i {
+  color: #ef2a38;
+}
+
+/* booking form */
+.tour .main .form-container {
+  box-shadow: 0 0 15px 0 rgb(6 30 98 / 15%);
+  border-radius: 0.625rem;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.tour .main .form-container h3 {
+  padding: 1rem 1.5rem;
+  text-transform: capitalize;
+}
+
+.tour .main .form-container hr {
+  margin: 0;
+}
+
+.tour .main form {
+  padding: 1rem 1.5rem;
+  max-height: max-content;
+}
+
+.tour .main form input {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: 2px solid transparent;
+  background: #f6f7fb;
+  color: var(--text-color);
+  margin-block: 0.5rem;
+  border-radius: 5px;
+  line-height: 1.5rem;
+  padding: 0.625rem 1.25rem;
+  transition: 0.2s ease;
+}
+
+.tour .main form input:focus {
+  outline-color: var(--primary-color);
+}
+
+.tour .main form label {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.tour .main form button {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* media queries */
+@media (max-width: 567px) {
+  .tour .main .form-container {
+    box-shadow: none;
+  }
+}
