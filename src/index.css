@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* bootstrap over writes */
+.modal-footer > button {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.modal-footer > button.btn-primary {
+  background: var(--primary-color) !important;
+}
+
+.modal-footer > button.btn-secondary {
+  background: var(--secondary-color) !important;
+}

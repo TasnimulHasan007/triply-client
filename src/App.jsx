@@ -9,6 +9,7 @@ import AuthProvider from './contexts/AuthProvider'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 import TourDetails from './Pages/TourDetails/TourDetails'
+import MyOrders from './Pages/MyOrders/MyOrders'
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/tours/:tourId">
             <TourDetails />
+          </PrivateRoute>
+          <PrivateRoute path="/myOrders">
+            <MyOrders />
           </PrivateRoute>
           <Route path="*">
             <NotFound />

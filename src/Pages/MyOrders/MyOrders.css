@@ -1,0 +1,53 @@
+/* my orders */
+.my_orders {
+  margin-block: 2.5rem;
+  text-align: center;
+}
+
+.my_orders h2 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.my_orders h4 {
+  margin-bottom: 1.2rem;
+}
+
+.my_orders .main_btn:hover {
+  color: #fff;
+}
+
+/* my order */
+.my_order {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 0 15px 0 rgb(6 30 98 / 15%);
+  border-radius: 0.625rem;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.my_order > div {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.my_order > div span {
+  font-weight: normal;
+  color: var(--secondary-color);
+}
+
+.my_order button {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #ea3a4e;
+  transition: color 0.2s ease-in-out;
+}
+
+.my_order button:hover {
+  color: #c61928;
+}
