@@ -37,3 +37,12 @@ header .drop_down > .dropdown-menu > a.active {
   background-color: unset;
   color: var(--primary-color);
 }
+
+/* profile photo */
+header .profile_photo {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 1.5rem;
+  outline: 2px solid var(--primary-color);
+}

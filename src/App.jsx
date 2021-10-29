@@ -5,27 +5,35 @@ import Home from './Pages/Home/Home'
 import NotFound from './Pages/NotFound/NotFound'
 import Footer from './components/Footer/Footer'
 import Join from './Pages/Join/Join'
+import AuthProvider from './contexts/AuthProvider'
+import Dashboard from './Pages/Dashboard/Dashboard'
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/join">
-          <Join />
-        </Route>
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/join">
+            <Join />
+          </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </AuthProvider>
   )
 }
 

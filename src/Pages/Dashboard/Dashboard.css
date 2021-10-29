@@ -1,0 +1,24 @@
+/* sidebar */
+.sidebar {
+  max-width: 350px;
+  height: 100%;
+  background: #ddd;
+  text-align: center;
+  padding-block: 3rem;
+}
+
+.sidebar .profile_photo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.sidebar h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.sidebar p {
+  letter-spacing: 2px;
+}

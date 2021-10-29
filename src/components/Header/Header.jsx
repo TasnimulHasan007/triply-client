@@ -1,9 +1,12 @@
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { Link, NavLink } from 'react-router-dom'
+import useAuth from '../../Hooks/useAuth'
 import './Header.css'
 import logo from '../../images/logo.svg'
 
 const Header = () => {
+  // user
+  const { user, logOut } = useAuth()
   return (
     <header>
       <Navbar bg="white" expand="lg" className="shadow-sm">
@@ -23,9 +26,11 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav" className="nav_bar">
             <Nav className="ms-auto">
               <Nav.Link as={NavLink} to="/">
-                <i class="fas fa-home"></i> Home
+                <i className="fas fa-home"></i> Home
               </Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
+              <Nav.Link as={NavLink} to="/myOrders">
+                <i className="fas fa-luggage-cart"></i> My Orders
+              </Nav.Link>
               <NavDropdown
                 title={
                   <>
@@ -35,14 +40,27 @@ const Header = () => {
                 className="drop_down"
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item as={NavLink} to="/join">
-                  Join
-                </NavDropdown.Item>
-                {/* <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item> */}
+                {user.email ? (
+                  <NavDropdown.Item as={NavLink} to="/dashboard">
+                    <i className="fas fa-tachometer-alt"></i> Dashboard
+                  </NavDropdown.Item>
+                ) : (
+                  <NavDropdown.Item as={NavLink} to="/join">
+                    <i className="fas fa-sign-in-alt"></i> Join
+                  </NavDropdown.Item>
+                )}
+                {user.email && (
+                  <>
+                    {/* <NavDropdown.Divider /> */}
+                    <NavDropdown.Item onClick={logOut}>
+                      <i className="fas fa-sign-out-alt"></i> Log Out
+                    </NavDropdown.Item>
+                  </>
+                )}
               </NavDropdown>
+              {user.email && (
+                <img src={user.photoURL} alt="" className="profile_photo" />
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
