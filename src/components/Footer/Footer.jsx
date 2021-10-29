@@ -29,7 +29,7 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="d-flex align-items-center justify-content-center"
+                  className="d-flex align-items-center justify-content-center main_btn"
                 >
                   Subscribe <i className="fas fa-arrow-right ms-2"></i>
                 </button>

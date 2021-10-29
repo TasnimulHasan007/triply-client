@@ -1,0 +1,48 @@
+/* add tour */
+.add_tour {
+  color: #f2e8d9;
+}
+
+.add_tour h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.add_tour form label,
+.add_tour form input,
+.add_tour form textarea,
+.add_tour form button {
+  display: block;
+  width: 100%;
+}
+
+.add_tour form input,
+.add_tour form textarea {
+  margin-bottom: 1rem;
+  border: 0.125rem solid #f2e8d9;
+  color: inherit;
+  border-radius: 5px;
+  background-color: transparent;
+  line-height: 1.5rem;
+  padding: 0.625rem 1.25rem;
+  outline: 0;
+  transition: 0.2s ease;
+}
+
+.add_tour label {
+  line-height: 2rem;
+}
+
+.add_tour textarea {
+  min-height: 5rem;
+  max-height: 15rem;
+}
+
+.add_tour form input:focus,
+.add_tour form textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.add_tour form {
+  padding-block: 1.5rem;
+}

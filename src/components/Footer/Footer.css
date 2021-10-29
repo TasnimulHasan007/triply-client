@@ -7,8 +7,8 @@ footer {
 /* details */
 footer .details {
   padding-block: 4.5rem;
-  background: url(../../images/footer-bg.png) no-repeat top right,
-    url(../../images/footer-bg-2.png) no-repeat top left;
+  background: url(../../images/pattern-1.png) no-repeat top right,
+    url(../../images/pattern-2.png) no-repeat top left;
 }
 /* typography */
 footer .details h5 {
@@ -83,23 +83,6 @@ footer .details form input {
 
 footer .details form input:focus {
   border-color: var(--primary-color);
-}
-
-footer .details form button {
-  font-size: 0.875rem;
-  border-radius: 5px;
-  font-weight: 700;
-  background: var(--primary-color);
-  padding: 0.75rem 1.25rem;
-  color: #fff;
-  outline: 0;
-  border: 0;
-  transition: 0.2s ease;
-  text-align: center;
-}
-
-footer .details button:hover {
-  background: var(--primary-color-darkened);
 }
 
 /* sponsers */

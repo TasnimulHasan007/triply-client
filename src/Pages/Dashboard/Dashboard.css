@@ -1,24 +1,88 @@
 /* sidebar */
 .sidebar {
+  width: 100%;
   max-width: 350px;
   height: 100%;
-  background: #ddd;
   text-align: center;
   padding-block: 3rem;
 }
 
-.sidebar .profile_photo {
+.sidebar .user-details .profile_photo {
   border-radius: 50%;
   width: 80px;
   height: 80px;
   margin-bottom: 1rem;
 }
 
-.sidebar h3 {
+.sidebar .user-details h3 {
   color: var(--primary-color);
   font-size: 1.2rem;
 }
 
-.sidebar p {
+.sidebar .user-details p {
   letter-spacing: 2px;
+}
+
+.sidebar .user-details hr {
+  margin-bottom: 2.5rem;
+}
+
+/* navigation */
+.sidebar .navigation {
+  padding-inline: 1.5rem;
+  text-align: left;
+}
+
+.sidebar .navigation button {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .navigation button i {
+  margin-right: 0.5rem;
+}
+
+.sidebar .navigation button:hover,
+.sidebar .navigation button.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* main area */
+.main-area {
+  background: url(../../images/pattern-1.png) no-repeat top right,
+    url(../../images/pattern-2.png) no-repeat bottom left;
+  width: 100%;
+  padding: 1.5rem;
+  position: relative;
+  color: #f2e8d9;
+}
+.main-area::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(27, 41, 81, 0.8);
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    max-width: unset;
+  }
+  .main-area {
+    margin-block: 1.5rem;
+    border-radius: 10px;
+  }
+  .main-area::before {
+    border-radius: 10px;
+  }
 }
