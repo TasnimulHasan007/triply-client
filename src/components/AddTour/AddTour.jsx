@@ -15,7 +15,6 @@ const AddTour = () => {
       if (res.data.insertedId) {
         setModalShow(true)
         reset()
-        console.log(data)
       }
     })
   }

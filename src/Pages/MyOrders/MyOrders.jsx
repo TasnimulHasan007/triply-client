@@ -5,6 +5,7 @@ import { confirm } from 'react-bootstrap-confirmation'
 import { Link } from 'react-router-dom'
 import useAuth from '../../Hooks/useAuth'
 import './MyOrders.css'
+import noOrder from '../../images/no-order.svg'
 
 const MyOrders = () => {
   // user
@@ -31,12 +32,12 @@ const MyOrders = () => {
     }
   }
   return (
-    <div className="my_orders">
+    <div className="_orders">
       <Container>
         <h2>My Orders</h2>
         <div className="orders">
           {myOrders.map(order => (
-            <div key={order._id} className="my_order">
+            <div key={order._id} className="_order">
               <div className="title">{order.tour.title}</div>
               <div className="price">
                 Price: <span>${order.tour.price}</span>
@@ -56,7 +57,8 @@ const MyOrders = () => {
           ))}
           {myOrders.length || (
             <>
-              <h4>Place an order to see details</h4>
+              <img src={noOrder} alt="" />
+              <h4>No orders to show</h4>
               <Link to="/" className="main_btn">
                 Place Order Here
               </Link>

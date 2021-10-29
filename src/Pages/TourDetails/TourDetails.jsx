@@ -18,7 +18,7 @@ const TourDetails = () => {
     fetch(`http://localhost:5000/tours/${tourId}`)
       .then(res => res.json())
       .then(data => setTour(data))
-  }, [tour, tourId])
+  }, [tourId])
   // react hook form
   const { register, handleSubmit, reset } = useForm()
 
@@ -30,7 +30,6 @@ const TourDetails = () => {
       if (res.data.insertedId) {
         setModalShow(true)
         reset()
-        console.log(data)
       }
     })
   }

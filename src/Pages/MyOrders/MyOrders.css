@@ -1,26 +1,31 @@
 /* my orders */
-.my_orders {
+._orders {
   margin-block: 2.5rem;
   text-align: center;
 }
 
-.my_orders h2 {
+._orders h2 {
   font-size: 2.5rem;
   text-transform: capitalize;
   line-height: 1.5;
   padding-bottom: 2rem;
 }
 
-.my_orders h4 {
-  margin-bottom: 1.2rem;
+._orders h4 {
+  margin-bottom: 1.5rem;
 }
 
-.my_orders .main_btn:hover {
+._orders .main_btn:hover {
   color: #fff;
 }
 
+._orders img {
+  max-width: 450px;
+  margin-bottom: 3rem;
+}
+
 /* my order */
-.my_order {
+._order {
   display: flex;
   justify-content: space-between;
   background: #fff;
@@ -30,17 +35,17 @@
   margin-bottom: 1.5rem;
 }
 
-.my_order > div {
+._order > div {
   font-weight: bold;
   color: var(--primary-color);
 }
 
-.my_order > div span {
+._order > div span {
   font-weight: normal;
   color: var(--secondary-color);
 }
 
-.my_order button {
+._order button {
   border: 0;
   outline: 0;
   background: transparent;
@@ -48,6 +53,15 @@
   transition: color 0.2s ease-in-out;
 }
 
-.my_order button:hover {
+._order button:hover {
   color: #c61928;
+}
+
+._order button.approve {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+._order button.approve:hover {
+  color: var(--primary-color-darkened);
 }
