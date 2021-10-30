@@ -8,7 +8,8 @@ import noOrder from '../../images/no-order.svg'
 const ManageOrders = () => {
   // states
   const [orders, setOrders] = useState([])
-  const [modalShow, setModalShow] = useState(false)
+  const [approveModalShow, setApproveModalShow] = useState(false)
+  const [deleteModalShow, setDeleteModalShow] = useState(false)
 
   // load data
   useEffect(() => {
@@ -26,6 +27,7 @@ const ManageOrders = () => {
           if (res.data.deletedCount > 0) {
             const remainingOrders = orders.filter(order => order._id !== id)
             setOrders(remainingOrders)
+            setDeleteModalShow(true)
           }
         })
     }
@@ -43,7 +45,7 @@ const ManageOrders = () => {
         )
         .then(res => {
           if (res.data.modifiedCount > 0) {
-            setModalShow(true)
+            setApproveModalShow(true)
           }
         })
     }
@@ -91,18 +93,32 @@ const ManageOrders = () => {
           )}
         </div>
       </Container>
-      {/* modal */}
+      {/* approve modal */}
       <Modal
         size="sm"
-        show={modalShow}
+        show={approveModalShow}
         onHide={() => {
-          setModalShow(false)
+          setApproveModalShow(false)
         }}
         aria-labelledby="example-modal-sizes-title-sm"
       >
         <Modal.Header closeButton className="rounded">
           <Modal.Title id="example-modal-sizes-title-sm" className="fs-5">
             <i className="far fa-check-circle text-success"></i> Order Approved
+          </Modal.Title>
+        </Modal.Header>
+      </Modal>
+      {/* delete modal */}
+      {/* modal */}
+      <Modal
+        size="sm"
+        show={deleteModalShow}
+        onHide={() => setDeleteModalShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+      >
+        <Modal.Header closeButton className="rounded">
+          <Modal.Title id="example-modal-sizes-title-sm" className="fs-5">
+            <i className="far fa-check-circle text-success"></i> Delete Sucess
           </Modal.Title>
         </Modal.Header>
       </Modal>

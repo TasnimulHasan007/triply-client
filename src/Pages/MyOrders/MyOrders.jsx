@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Modal } from 'react-bootstrap'
 import { confirm } from 'react-bootstrap-confirmation'
 import { Link } from 'react-router-dom'
 import useAuth from '../../Hooks/useAuth'
@@ -12,6 +12,7 @@ const MyOrders = () => {
   const { user } = useAuth()
   // states
   const [orders, setOrders] = useState([])
+  const [deleteModalShow, setDeleteModalShow] = useState(false)
   // load data
   useEffect(() => {
     fetch('https://afternoon-sea-48900.herokuapp.com/orders')
@@ -29,6 +30,7 @@ const MyOrders = () => {
           if (res.data.deletedCount > 0) {
             const remainingOrders = orders.filter(order => order._id !== id)
             setOrders(remainingOrders)
+            setDeleteModalShow(true)
           }
         })
     }
@@ -71,6 +73,19 @@ const MyOrders = () => {
             </>
           )}
         </div>
+        {/* modal */}
+        <Modal
+          size="sm"
+          show={deleteModalShow}
+          onHide={() => setDeleteModalShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+        >
+          <Modal.Header closeButton className="rounded">
+            <Modal.Title id="example-modal-sizes-title-sm" className="fs-5">
+              <i className="far fa-check-circle text-success"></i> Delete Sucess
+            </Modal.Title>
+          </Modal.Header>
+        </Modal>
       </Container>
     </div>
   )
