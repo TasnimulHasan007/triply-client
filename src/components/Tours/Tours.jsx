@@ -13,10 +13,11 @@ const Tours = () => {
       .then(data => setTours(data))
   }, [])
   return (
-    <div className="tours">
+    <div id="tours" className="tours">
       {tours.length ? (
         <Container>
-          <h2 className="text-center">Our Tours</h2>
+          <h3 className="subtitle">What's New</h3>
+          <h2 className="title">Our Tours</h2>
           <div className="grid-container mb-5">
             {tours.map(tour => (
               <Tour key={tour._id} tour={tour} />

@@ -9714,6 +9714,13 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-bootstrap-confirmation@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-confirmation/-/react-bootstrap-confirmation-1.0.4.tgz#82cf6038121c9264fdf2387a0ba6f9e1a643d8b5"
+  integrity sha512-4Nd8gkMTAxxym7ZvEysPbJqi3cTpxF/Xz82zsINpd6bG3lpWGgxlimuDNZnLYWwi79DcUUPYD+COeijhzM0Xtw==
+  dependencies:
+    react-confirm "^0.1.18"
+
 react-bootstrap@^2.0.0-rc.1:
   version "2.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.0.0-rc.1.tgz#c216b58ab53341a4e3870dc571c9d4bd82249b65"
@@ -9736,6 +9743,11 @@ react-bootstrap@^2.0.0-rc.1:
     react-transition-group "^4.4.1"
     uncontrollable "^7.2.1"
     warning "^4.0.3"
+
+react-confirm@^0.1.18:
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/react-confirm/-/react-confirm-0.1.24.tgz#789a8ca5bc9ae52a4bbe6fd75c6b4b9ef69a60fd"
+  integrity sha512-96qA+mbZyBRmh/3Y5aDgrYLwLndbaRjkP3GlXQtPEQbIH0P66xGcHJ7ui6y/MN85AZWq/V3drA1fJOiEcVkAVA==
 
 react-dev-utils@^11.0.3:
   version "11.0.4"
@@ -9818,6 +9830,13 @@ react-router-dom@^5.3.0:
     react-router "5.2.1"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-router-hash-link@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/react-router-hash-link/-/react-router-hash-link-2.4.3.tgz#570824d53d6c35ce94d73a46c8e98673a127bf08"
+  integrity sha512-NU7GWc265m92xh/aYD79Vr1W+zAIXDWp3L2YZOYP4rCqPnJ6LI6vh3+rKgkidtYijozHclaEQTAHaAaMWPVI4A==
+  dependencies:
+    prop-types "^15.7.2"
 
 react-router@5.2.1:
   version "5.2.1"

@@ -1,10 +1,6 @@
-.tours h2 {
-  font-size: 3.125rem;
-  font-weight: 700;
-  line-height: 3.75rem;
-  margin: 3.75rem;
+.tours {
+  padding-block: 3.5rem;
 }
-
 /* grid */
 .tours .grid-container {
   display: grid;

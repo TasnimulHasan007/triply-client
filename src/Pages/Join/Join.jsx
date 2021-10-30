@@ -27,7 +27,7 @@ const Join = () => {
   }
 
   return (
-    <div className="join">
+    <div className="join mt-5">
       <Container className="join-container">
         <img src={logo} alt="" className="logo" />
         <p>Login using social media to get quick access</p>

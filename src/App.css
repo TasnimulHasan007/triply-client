@@ -33,3 +33,19 @@ input[type='submit'] {
 .main_btn:focus {
   background: var(--primary-color-darkened);
 }
+
+.title {
+  text-align: center;
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 3.75rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.875rem;
+  line-height: 1.5;
+  color: var(--primary-color);
+}

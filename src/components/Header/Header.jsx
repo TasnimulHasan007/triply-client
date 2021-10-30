@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { Link, NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import useAuth from '../../Hooks/useAuth'
 import './Header.css'
 import logo from '../../images/logo.svg'
@@ -8,7 +9,7 @@ const Header = () => {
   // user
   const { user, logOut } = useAuth()
   return (
-    <header className=" sticky-top">
+    <header className="sticky-top">
       <Navbar bg="white" expand="lg" className="shadow-sm">
         <Container>
           <Navbar.Brand as={Link} to="/">
@@ -25,8 +26,14 @@ const Header = () => {
           />
           <Navbar.Collapse id="basic-navbar-nav" className="nav_bar">
             <Nav className="ms-auto">
-              <Nav.Link as={NavLink} to="/">
+              <Nav.Link as={HashLink} to="/Home#home">
                 <i className="fas fa-home"></i> Home
+              </Nav.Link>
+              <Nav.Link as={HashLink} to="/Home#tours">
+                <i className="fas fa-plane-departure"></i> Tours
+              </Nav.Link>
+              <Nav.Link as={HashLink} to="/Home#features">
+                <i className="fas fa-coffee"></i> Features
               </Nav.Link>
               {user.email && (
                 <Nav.Link as={NavLink} to="/myOrders">
