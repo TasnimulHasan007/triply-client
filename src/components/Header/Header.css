@@ -4,44 +4,83 @@ header {
 }
 
 /* navbar */
-header .nav_bar a {
+header .nav_bar .navbar-nav {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+header .nav_bar a,
+header .nav_bar .logout_btn {
   font-weight: 500;
   color: black !important;
-  margin-left: 1.5rem;
+  border: 0;
+  background: transparent;
+  text-align-last: left;
+  padding: 0.8rem 1.5rem !important;
+  transition: 0.2s ease;
 }
 
 header .nav_bar a:hover,
-header .nav_bar a:focus {
+header .nav_bar .logout_btn:hover,
+header .nav_bar a.active {
   color: var(--primary-color) !important;
 }
 
-/* toggler */
+header .nav_bar a:hover,
+header .nav_bar .logout_btn:hover {
+  background: #f9f4f0;
+}
+
+/* hamburger */
 header .nav_toggler {
+  background: none;
+  box-shadow: none !important;
   border: none;
 }
 
-/* dropdown */
-header .drop_down > a::after {
-  display: none;
+header .nav_toggler:active,
+header .nav_toggler:focus {
+  outline: 0;
 }
 
-header .drop_down > .dropdown-menu {
-  min-width: unset;
-  padding-block: 0;
-  margin-bottom: 1.2rem;
+header .nav_toggler .icon-bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 4px 0;
+  background: var(--secondary-color);
+  transition: all 0.2s;
 }
 
-header .drop_down > .dropdown-menu > a {
-  transform: translateX(-15%);
+header .nav_toggler:hover .icon-bar {
+  background: var(--primary-color);
 }
 
-header .drop_down > .dropdown-menu > a:hover {
-  background-color: unset;
+header .nav_toggler .icon-bar:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
 }
 
-header .drop_down > .dropdown-menu > a.active {
-  background-color: unset;
-  color: var(--primary-color);
+header .nav_toggler .icon-bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+header .nav_toggler .icon-bar:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+header .nav_toggler.collapsed .icon-bar:nth-of-type(1) {
+  transform: rotate(0);
+}
+
+header .nav_toggler.collapsed .icon-bar:nth-of-type(2) {
+  opacity: 1;
+}
+
+header .nav_toggler.collapsed .icon-bar:nth-of-type(3) {
+  transform: rotate(0);
 }
 
 /* profile photo */
@@ -55,8 +94,11 @@ header .profile_photo {
 
 /* media queries */
 @media (max-width: 992px) {
-  header .drop_down > .dropdown-menu > a {
-    transform: unset;
-    border: none;
+  header .profile_photo {
+    margin-block: 1rem;
+    order: 1;
+  }
+  header .nav_bar .navbar-nav {
+    align-items: flex-start;
   }
 }

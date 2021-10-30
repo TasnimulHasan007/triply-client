@@ -42,7 +42,7 @@ const MyOrders = () => {
         <div className="orders">
           {myOrders.map(order => (
             <div key={order._id} className="_order">
-              <div className="title">
+              <div className="order_title">
                 <Link to={`/tours/${order.tour._id}`}>
                   {order.tour.title.substring(0, 15)}...
                 </Link>

@@ -1,6 +1,6 @@
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Link, NavLink } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link'
+import { NavHashLink } from 'react-router-hash-link'
 import useAuth from '../../Hooks/useAuth'
 import './Header.css'
 import logo from '../../images/logo.svg'
@@ -17,57 +17,65 @@ const Header = () => {
               src={logo}
               alt="Triply"
               height="30"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top my-2"
             />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             className="nav_toggler"
-          />
+          >
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav" className="nav_bar">
             <Nav className="ms-auto">
-              <Nav.Link as={HashLink} to="/Home#home">
+              <Nav.Link
+                as={NavHashLink}
+                activeClassName="active"
+                to="/Home#home"
+              >
                 <i className="fas fa-home"></i> Home
               </Nav.Link>
-              <Nav.Link as={HashLink} to="/Home#tours">
+              <Nav.Link
+                as={NavHashLink}
+                activeClassName="active"
+                to="/Home#tours"
+              >
                 <i className="fas fa-plane-departure"></i> Tours
               </Nav.Link>
-              <Nav.Link as={HashLink} to="/Home#features">
+              <Nav.Link
+                as={NavHashLink}
+                activeClassName="active"
+                to="/Home#features"
+              >
                 <i className="fas fa-coffee"></i> Features
               </Nav.Link>
-              {user.email && (
-                <Nav.Link as={NavLink} to="/myOrders">
-                  <i className="fas fa-luggage-cart"></i> My Orders
-                </Nav.Link>
-              )}
-              <NavDropdown
-                title={
-                  <>
-                    <i className="far fa-user"></i> Account
-                  </>
-                }
-                className="drop_down"
-                id="basic-nav-dropdown"
-              >
-                {user.email ? (
-                  <NavDropdown.Item as={NavLink} to="/dashboard">
+              {user.email ? (
+                <>
+                  <Nav.Link
+                    as={NavLink}
+                    activeClassName="active"
+                    to="/myOrders"
+                  >
+                    <i className="fas fa-luggage-cart"></i> My Orders
+                  </Nav.Link>
+                  <Nav.Link
+                    as={NavLink}
+                    activeClassName="active"
+                    to="/dashboard"
+                  >
                     <i className="fas fa-tachometer-alt"></i> Dashboard
-                  </NavDropdown.Item>
-                ) : (
-                  <NavDropdown.Item as={NavLink} to="/join">
-                    <i className="fas fa-sign-in-alt"></i> Join
-                  </NavDropdown.Item>
-                )}
-                {user.email && (
-                  <>
-                    <NavDropdown.Item onClick={logOut}>
-                      <i className="fas fa-sign-out-alt"></i> Log Out
-                    </NavDropdown.Item>
-                  </>
-                )}
-              </NavDropdown>
-              {user.email && (
-                <img src={user.photoURL} alt="" className="profile_photo" />
+                  </Nav.Link>
+                  <button className="logout_btn" onClick={logOut}>
+                    <i className="fas fa-sign-out-alt"></i> Log Out
+                  </button>
+                  <img src={user.photoURL} alt="" className="profile_photo" />
+                </>
+              ) : (
+                <Nav.Link as={NavLink} activeClassName="active" to="/join">
+                  <i className="fas fa-sign-in-alt"></i> Join
+                </Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>
