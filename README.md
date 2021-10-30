@@ -1,8 +1,8 @@
 # Triply
 
-#### [Client Site Live Link](https://triply-travel-site.web.app/)
+#### [Client Side Live Link](https://triply-travel-site.web.app/)
 
-#### [Server Site Live Link](https://afternoon-sea-48900.herokuapp.com/)
+#### [Server Side Live Link](https://afternoon-sea-48900.herokuapp.com/)
 
 #### [Server Git Repo Link](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-TasnimulHasan007)
 
