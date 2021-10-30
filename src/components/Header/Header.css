@@ -15,6 +15,7 @@ header .nav_bar .logout_btn {
   font-weight: 500;
   color: black !important;
   border: 0;
+  font-size: 0.875rem;
   background: transparent;
   text-align-last: left;
   padding: 0.8rem 1.5rem !important;

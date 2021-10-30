@@ -3,11 +3,30 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  overflow: overlay;
 }
-
+/* selection */
 *::selection {
   background-color: var(--primary-color);
   color: #fff;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 200vw;
+  border: 3px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color-darkened);
+  background-clip: padding-box;
 }
 
 code {

@@ -9,7 +9,7 @@ const Features = () => {
       <Container>
         <h3 className="subtitle">Why Us</h3>
         <h2 className="title">We Make All The Process Easy</h2>
-        <Row className="features-container g-5" lg={3} md={2} sm={1}>
+        <Row className="features-container g-5">
           <Feature
             icon="fab fa-magento"
             title="Best Travel Agent"

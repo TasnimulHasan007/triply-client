@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { NavHashLink } from 'react-router-hash-link'
 import useAuth from '../../Hooks/useAuth'
 import './Header.css'
@@ -12,7 +12,7 @@ const Header = () => {
     <header className="sticky-top">
       <Navbar bg="white" expand="lg" className="shadow-sm">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={NavHashLink} to="/home#home">
             <img
               src={logo}
               alt="Triply"
@@ -33,23 +33,30 @@ const Header = () => {
               <Nav.Link
                 as={NavHashLink}
                 activeClassName="active"
-                to="/Home#home"
+                to="/home#home"
               >
                 <i className="fas fa-home"></i> Home
               </Nav.Link>
               <Nav.Link
                 as={NavHashLink}
                 activeClassName="active"
-                to="/Home#tours"
+                to="/home#tours"
               >
                 <i className="fas fa-plane-departure"></i> Tours
               </Nav.Link>
               <Nav.Link
                 as={NavHashLink}
                 activeClassName="active"
-                to="/Home#features"
+                to="/home#features"
               >
                 <i className="fas fa-coffee"></i> Features
+              </Nav.Link>
+              <Nav.Link
+                as={NavHashLink}
+                activeClassName="active"
+                to="/home#about"
+              >
+                <i className="fas fa-coffee"></i> About Us
               </Nav.Link>
               {user.email ? (
                 <>

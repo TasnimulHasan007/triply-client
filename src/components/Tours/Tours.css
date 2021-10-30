@@ -1,5 +1,7 @@
 .tours {
   padding-block: 3.5rem;
+  background: url(../../images/pattern-3.png) no-repeat top right,
+    url(../../images/pattern-4.png) no-repeat top left;
 }
 /* grid */
 .tours .grid-container {

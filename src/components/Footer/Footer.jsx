@@ -54,28 +54,28 @@ const Footer = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/t4snimul"
                 >
                   <i className="fab fa-facebook"></i>
                 </a>
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.youtube.com/"
+                  href="https://www.github.com/tasnimulhasan007"
                 >
-                  <i className="fab fa-youtube"></i>
+                  <i className="fab fa-github"></i>
                 </a>
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.twitter.com/"
+                  href="https://www.twitter.com/t4snimul"
                 >
                   <i className="fab fa-twitter"></i>
                 </a>
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/__tasnimul"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
