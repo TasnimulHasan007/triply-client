@@ -11,7 +11,7 @@ const Dashboard = () => {
   // states
   const [control, setControl] = useState('ManageOrders')
   return (
-    <Container className="d-flex flex-md-row flex-column">
+    <Container className="d-flex flex-lg-row flex-column">
       <div className="sidebar">
         <div className="user-details">
           <img src={user.photoURL} alt="" className="profile_photo" />

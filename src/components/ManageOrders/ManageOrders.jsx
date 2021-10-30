@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Container, Modal } from 'react-bootstrap'
 import { confirm } from 'react-bootstrap-confirmation'
+import { Link } from 'react-router-dom'
 import noOrder from '../../images/no-order.svg'
 
 const ManageOrders = () => {
@@ -53,7 +54,11 @@ const ManageOrders = () => {
         <div className="orders">
           {orders.map(order => (
             <div key={order._id} className="_order">
-              <div className="title">{order.tour.title}</div>
+              <div className="title">
+                <Link to={`/tours/${order.tour._id}`}>
+                  {order.tour.title.substring(0, 15)}...
+                </Link>
+              </div>
               <div className="email">
                 Email: <span>{order.email}</span>
               </div>
@@ -97,7 +102,7 @@ const ManageOrders = () => {
       >
         <Modal.Header closeButton className="rounded">
           <Modal.Title id="example-modal-sizes-title-sm" className="fs-5">
-            <i className="far fa-check-circle text-success"></i> Insert Sucess
+            <i className="far fa-check-circle text-success"></i> Order Approved
           </Modal.Title>
         </Modal.Header>
       </Modal>

@@ -28,9 +28,11 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/">
                 <i className="fas fa-home"></i> Home
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/myOrders">
-                <i className="fas fa-luggage-cart"></i> My Orders
-              </Nav.Link>
+              {user.email && (
+                <Nav.Link as={NavLink} to="/myOrders">
+                  <i className="fas fa-luggage-cart"></i> My Orders
+                </Nav.Link>
+              )}
               <NavDropdown
                 title={
                   <>

@@ -1,3 +1,8 @@
+/* header */
+header {
+  user-select: none;
+}
+
 /* navbar */
 header .nav_bar a {
   font-weight: 500;
@@ -23,6 +28,7 @@ header .drop_down > a::after {
 header .drop_down > .dropdown-menu {
   min-width: unset;
   padding-block: 0;
+  margin-bottom: 1.2rem;
 }
 
 header .drop_down > .dropdown-menu > a {
@@ -45,4 +51,12 @@ header .profile_photo {
   height: 40px;
   margin-left: 1.5rem;
   outline: 2px solid var(--primary-color);
+}
+
+/* media queries */
+@media (max-width: 992px) {
+  header .drop_down > .dropdown-menu > a {
+    transform: unset;
+    border: none;
+  }
 }

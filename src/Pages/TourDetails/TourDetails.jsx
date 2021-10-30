@@ -39,16 +39,16 @@ const TourDetails = () => {
     <div className="tour">
       <div className="header">
         <Container>
-          <h1>{tour.title}</h1>
+          <h1>{tour?.title}</h1>
           <h5>
-            <i className="fas fa-map-marker-alt"></i> {tour.location}
+            <i className="fas fa-map-marker-alt"></i> {tour?.location}
           </h5>
-          <img src={tour.img} alt="" />
+          <img src={tour?.img} alt="" />
           <div className="d-flex justify-content-center  features">
             <div>
               <p>Price</p>
               <span className="price">
-                From <span className="orange">${tour.price}</span>
+                From <span className="orange">${tour?.price}</span>
               </span>
             </div>
             <div className="d-flex align-items-center">
@@ -57,7 +57,7 @@ const TourDetails = () => {
               </div>
               <div>
                 <p>Duration</p>
-                <span>{tour.duration} Days</span>
+                <span>{tour?.duration} Days</span>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ const TourDetails = () => {
         <Row className="main d-flex align-items-start">
           <Col lg="8" className="pe-md-5">
             <h2>Overview</h2>
-            <p>{tour.description}</p>
+            <p>{tour?.description}</p>
             <hr />
             <h2>Included /Excluded</h2>
             <Row>

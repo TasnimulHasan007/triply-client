@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Spinner } from 'react-bootstrap'
 import Tour from '../Tour/Tour'
 import './Tours.css'
 
@@ -14,14 +14,26 @@ const Tours = () => {
   }, [])
   return (
     <div className="tours">
-      <Container>
-        <h2 className="text-center">Our Tours</h2>
-        <div className="grid-container mb-5">
-          {tours.map(tour => (
-            <Tour key={tour._id} tour={tour} />
-          ))}
-        </div>
-      </Container>
+      {tours.length ? (
+        <Container>
+          <h2 className="text-center">Our Tours</h2>
+          <div className="grid-container mb-5">
+            {tours.map(tour => (
+              <Tour key={tour._id} tour={tour} />
+            ))}
+          </div>
+        </Container>
+      ) : (
+        <Container
+          style={{ height: 'calc(100vh - 250px)' }}
+          className="py-5 w-100 d-flex justify-content-center align-items-center"
+        >
+          <Spinner
+            animation="border"
+            style={{ color: 'var(--primary-color)' }}
+          />
+        </Container>
+      )}
     </div>
   )
 }
