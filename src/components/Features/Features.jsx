@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
+import Fade from 'react-reveal/Fade'
 import Feature from '../Feature/Feature'
 import './Features.css'
 
@@ -7,8 +8,12 @@ const Features = () => {
   return (
     <div className="features" id="features">
       <Container>
-        <h3 className="subtitle">Why Us</h3>
-        <h2 className="title">We Make All The Process Easy</h2>
+        <Fade left>
+          <h3 className="subtitle">Why Us</h3>
+        </Fade>
+        <Fade right>
+          <h2 className="title">We Make All The Process Easy</h2>
+        </Fade>
         <Row className="features-container g-5">
           <Feature
             icon="fab fa-magento"

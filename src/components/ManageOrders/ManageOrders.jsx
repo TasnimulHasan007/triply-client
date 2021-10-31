@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Container, Modal } from 'react-bootstrap'
 import { confirm } from 'react-bootstrap-confirmation'
+import Fade from 'react-reveal/Fade'
 import { Link } from 'react-router-dom'
 import noOrder from '../../images/no-order.svg'
 
@@ -56,33 +57,35 @@ const ManageOrders = () => {
         <div className="orders">
           {orders.map(order => (
             <div key={order._id} className="_order">
-              <div className="order_title">
-                <Link to={`/tours/${order.tour._id}`}>
-                  {order.tour.title.substring(0, 15)}...
-                </Link>
-              </div>
-              <div className="email">
-                Email: <span>{order.email}</span>
-              </div>
-              <div className="status">
-                {order.status === 'Pending' ? (
-                  <button
-                    className="approve"
-                    onClick={() => approveOrder(order)}
-                  >
-                    Approve
+              <Fade right>
+                <div className="order_title">
+                  <Link to={`/tours/${order.tour._id}`}>
+                    {order.tour.title.substring(0, 15)}...
+                  </Link>
+                </div>
+                <div className="email">
+                  Email: <span>{order.email}</span>
+                </div>
+                <div className="status">
+                  {order.status === 'Pending' ? (
+                    <button
+                      className="approve"
+                      onClick={() => approveOrder(order)}
+                    >
+                      Approve
+                    </button>
+                  ) : (
+                    <>
+                      Status: <span>{order.status}</span>
+                    </>
+                  )}
+                </div>
+                <div className="delete">
+                  <button onClick={() => deleteOrder(order._id)}>
+                    <i className="fas fa-trash"></i>
                   </button>
-                ) : (
-                  <>
-                    Status: <span>{order.status}</span>
-                  </>
-                )}
-              </div>
-              <div className="delete">
-                <button onClick={() => deleteOrder(order._id)}>
-                  <i className="fas fa-trash"></i>
-                </button>
-              </div>
+                </div>
+              </Fade>
             </div>
           ))}
           {orders.length || (

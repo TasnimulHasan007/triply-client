@@ -46,3 +46,8 @@
   margin-right: 25px;
   background: #fff;
 }
+
+.join .error {
+  font-size: 0.8rem;
+  color: #f44361;
+}

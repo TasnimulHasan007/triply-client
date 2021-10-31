@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
+import Fade from 'react-reveal/Fade'
 import logo from '../../images/logo.svg'
 import googleLogo from '../../images/google.png'
 import './Join.css'
@@ -28,14 +29,22 @@ const Join = () => {
 
   return (
     <div className="join">
-      <Container className="join-container">
-        <img src={logo} alt="" className="logo" />
-        <p>Login using social media to get quick access</p>
-        {error && <span className="error">{error}</span>}
-        <button className="google" onClick={handleGoogleSignIn}>
-          <img src={googleLogo} alt="" /> Continue With Google
-        </button>
-      </Container>
+      <Fade left>
+        <Container className="join-container">
+          <Fade bottom delay={250}>
+            <img src={logo} alt="" className="logo" />
+          </Fade>
+          <Fade bottom delay={350}>
+            <p>Login using social media to get quick access</p>
+            {error && <span className="error">{error}</span>}
+          </Fade>
+          <Fade bottom delay={450}>
+            <button className="google" onClick={handleGoogleSignIn}>
+              <img src={googleLogo} alt="" /> Continue With Google
+            </button>
+          </Fade>
+        </Container>
+      </Fade>
     </div>
   )
 }

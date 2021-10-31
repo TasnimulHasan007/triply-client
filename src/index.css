@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow: overlay;
+  overflow-x: hidden;
 }
 /* selection */
 *::selection {

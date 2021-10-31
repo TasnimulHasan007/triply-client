@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Spinner } from 'react-bootstrap'
+import Fade from 'react-reveal/Fade'
 import Tour from '../Tour/Tour'
 import './Tours.css'
 
@@ -16,8 +17,12 @@ const Tours = () => {
     <div id="tours" className="tours">
       {tours.length ? (
         <Container>
-          <h3 className="subtitle">What's New</h3>
-          <h2 className="title">Our Tours</h2>
+          <Fade left>
+            <h3 className="subtitle">What's New</h3>
+          </Fade>
+          <Fade right>
+            <h2 className="title">Our Tours</h2>
+          </Fade>
           <div className="grid-container mb-5">
             {tours.map(tour => (
               <Tour key={tour._id} tour={tour} />

@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Container, Modal } from 'react-bootstrap'
 import { confirm } from 'react-bootstrap-confirmation'
+import Fade from 'react-reveal/Fade'
 import { Link } from 'react-router-dom'
 import useAuth from '../../Hooks/useAuth'
 import './MyOrders.css'
@@ -42,25 +43,27 @@ const MyOrders = () => {
         <div className="orders">
           {myOrders.map(order => (
             <div key={order._id} className="_order">
-              <div className="order_title">
-                <Link to={`/tours/${order.tour._id}`}>
-                  {order.tour.title.substring(0, 15)}...
-                </Link>
-              </div>
-              <div className="price">
-                Price: <span>${order.tour.price}</span>
-              </div>
-              <div className="date">
-                Start tour on <span>{order.date}</span>
-              </div>
-              <div className="status">
-                Status: <span>{order.status}</span>
-              </div>
-              <div className="delete">
-                <button onClick={() => deleteOrder(order._id)}>
-                  <i className="fas fa-trash"></i>
-                </button>
-              </div>
+              <Fade right>
+                <div className="order_title">
+                  <Link to={`/tours/${order.tour._id}`}>
+                    {order.tour.title.substring(0, 15)}...
+                  </Link>
+                </div>
+                <div className="price">
+                  Price: <span>${order.tour.price}</span>
+                </div>
+                <div className="date">
+                  Start tour on <span>{order.date}</span>
+                </div>
+                <div className="status">
+                  Status: <span>{order.status}</span>
+                </div>
+                <div className="delete">
+                  <button onClick={() => deleteOrder(order._id)}>
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </div>
+              </Fade>
             </div>
           ))}
           {myOrders.length || (

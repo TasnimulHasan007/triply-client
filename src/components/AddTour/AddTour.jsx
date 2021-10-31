@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
+import Fade from 'react-reveal/Fade'
 import './AddTour.css'
 import { Modal } from 'react-bootstrap'
 
@@ -22,39 +23,55 @@ const AddTour = () => {
   }
   return (
     <div className="add_tour">
-      <h2>Add a Tourists Attraction</h2>
+      <Fade bottom>
+        <h2>Add a Tourists Attraction</h2>
+      </Fade>
       <form onSubmit={handleSubmit(addTour)}>
-        <label htmlFor="title">Title</label>
-        <input type="text" id="title" required {...register('title')} />
-        <label htmlFor="location">Location</label>
-        <input type="text" id="location" required {...register('location')} />
-        <label htmlFor="img">Image URL</label>
-        <input type="text" id="img" required {...register('img')} />
-        <label htmlFor="description">Description</label>
-        <textarea
-          id="description"
-          className="mb-3"
-          required
-          {...register('description')}
-        />
+        <Fade bottom delay={50}>
+          <label htmlFor="title">Title</label>
+          <input type="text" id="title" required {...register('title')} />
+        </Fade>
+        <Fade bottom delay={100}>
+          <label htmlFor="location">Location</label>
+          <input type="text" id="location" required {...register('location')} />
+        </Fade>
+        <Fade bottom delay={150}>
+          <label htmlFor="img">Image URL</label>
+          <input type="text" id="img" required {...register('img')} />
+        </Fade>
+        <Fade bottom delay={200}>
+          <label htmlFor="description">Description</label>
+          <textarea
+            id="description"
+            className="mb-3"
+            required
+            {...register('description')}
+          />
+        </Fade>
         <div className="d-flex justify-content-stretch w-100">
           <div className="w-100 me-3">
-            <label htmlFor="duration">Duration (days)</label>
-            <input
-              type="number"
-              id="duration"
-              required
-              {...register('duration')}
-            />
+            <Fade bottom delay={250}>
+              <label htmlFor="duration">Duration (days)</label>
+              <input
+                type="number"
+                id="duration"
+                required
+                {...register('duration')}
+              />
+            </Fade>
           </div>
           <div className="w-100">
-            <label htmlFor="price">Price (USD)</label>
-            <input type="number" id="price" required {...register('price')} />
+            <Fade bottom delay={300}>
+              <label htmlFor="price">Price (USD)</label>
+              <input type="number" id="price" required {...register('price')} />
+            </Fade>
           </div>
         </div>
-        <button type="submit" className="main_btn">
-          Add Tour
-        </button>
+        <Fade bottom delay={350}>
+          <button type="submit" className="main_btn">
+            Add Tour
+          </button>
+        </Fade>
       </form>
       {/* modal */}
       <Modal
