@@ -12,7 +12,7 @@ const NotFound = () => {
         <img src={notFoundImg} alt="" />
       </Fade>
       <Fade right delay={50}>
-        <h2 className="title">Oops! Look like you’re lost</h2>
+        <h2 className="title">Oops! Looks like you’re lost</h2>
       </Fade>
       <Fade right delay={150}>
         <p>
