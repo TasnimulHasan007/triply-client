@@ -1,10 +1,6 @@
 # Triply
 
-#### [Client Side Live Link](https://triply-travel-site.web.app/)
-
-#### [Server Side Live Link](https://afternoon-sea-48900.herokuapp.com/)
-
-#### [Server Git Repo Link](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-TasnimulHasan007)
+#### [Live Link](https://triply-travel-site.web.app/)
 
 Triply is specialized in giving the best outbound tours that give you nothing but pleasure and satisfaction. Our cheap international holiday packages from Bangladesh will give you a wide range of choices that will help you to choose your satisfactory tour.
 
